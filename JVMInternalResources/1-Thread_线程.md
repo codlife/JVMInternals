@@ -15,17 +15,18 @@ invokes the run() method in the Java thread.
   When the thread terminates all resources for both the native and Java thread are released.
 
 1. JVM System Threads
- - VM thread
+ - VM thread</br>
  VM threadThis thread waits for operations to appear that require the JVM to reach a safe-point. The reason these operations have to happen on a separate thread is because they all require the JVM to be at a safe point where modifications to the heap can not occur. The type of operations performed by this thread are "stop-the-world" garbage collections, thread stack dumps, thread suspension and biased locking revocation.
 
- - Periodic task thread
+ - Periodic task thread </br>
  This thread is responsible for timer events (i.e. interrupts) that are used to schedule execution of periodic operations
 
- - GC threads
+ - GC threads</br>
  These threads support the different types of garbage collection activities that occur in the JVM
 
- - Compiler threads
+ - Compiler threads </br>
  These threads compile byte code to native code at runtime
 
- - Signal dispatcher threadThis thread receives signals sent to the JVM process and handle them inside the JVM by calling the appropriate JVM methods.
+ - Signal dispatcher thread </br>
+ This thread receives signals sent to the JVM process and handle them inside the JVM by calling the appropriate JVM methods.
 

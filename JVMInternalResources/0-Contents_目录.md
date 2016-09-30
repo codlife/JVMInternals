@@ -8,7 +8,9 @@ The components shown on this diagram are each explained below in two sections. F
 
 1. Threads
  - JVM System Threads
- - Per Thread
+
+2. Per Thread
+
  - program Counter (PC)
  - Stack
  - Native Stack
@@ -33,4 +35,3 @@ The components shown on this diagram are each explained below in two sections. F
  - Exception Table
  - Symbol Table
 
- 

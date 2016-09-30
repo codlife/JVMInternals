@@ -7,8 +7,9 @@ The following diagram show the key internal components of a typical JVM that con
 The components shown on this diagram are each explained below in two sections. First section covers the components that are created for each thread and the second section covers the components that are created independently of threads.
 
 1. Threads  
- - JVM System Threads 
- - Per Thread
+ - JVM System Threads
+
+2. Per Thread
  - program Counter (PC)
  - Stack
  - Native Stack
