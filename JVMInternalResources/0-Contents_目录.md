@@ -33,4 +33,3 @@ The components shown on this diagram are each explained below in two sections. F
  - Exception Table
  - Symbol Table
 
- 
