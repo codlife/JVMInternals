@@ -37,3 +37,5 @@ The components shown on this diagram are each explained below in two sections. F
   - Classloader
   - Faster Class Loading
 
+5. Discussion
+
