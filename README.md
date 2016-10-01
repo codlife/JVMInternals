@@ -14,4 +14,5 @@ The following diagram show the key internal components of a typical JVM that con
 ##<a name='gc'>GC
 * [Oracle java garbage collection basics](http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
 * [Understanding java garbage collection](https://www.azul.com/files/Understanding_Java_Garbage_Collection_v41.pdf)
+* [Java garbage colleciton algorithm in a visua method](https://spin.atomicobject.com/2014/09/03/visualizing-garbage-collection-algorithms/)
 
