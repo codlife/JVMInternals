@@ -146,11 +146,11 @@ The following byte code operands are used in this class file
 </br>As in any typical byte code the majority of the operands interact with the local variables, operand stack and run time constant pool as follows.
 </br>The constructor has two instructions first this is pushed onto the operand stack, next the constructor for the super class is invoked which consumes the value off this and therefore pops it off the operand stack.
 
-![image](Pictures/bytecode_explanation_SimpleClass.png)
+![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/bytecode_explanation_SimpleClass.png)
 
 The sayHello() method is more complex as it has to resolve symbolic references to actual references using the run time constant pool, as explained in more detail above. The first operand getstatic is used to push a reference to the static field out of the System class on to the operand stack. The next operand ldc pushes the string "Hello" onto the operand stack. The final operand invokevirtual invokes the println method of System.out which pops "Hello" off the operand stack as an argument and creates a new frame for the current thread.
 
-!(image)(Pictures/bytecode_explanation_sayHello_smaller.png)
+![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/bytecode_explanation_sayHello_smaller.png)
 
 ##Classloader
 The JVM starts up by loading an initial class using the bootstrap classloader. The class is then linked and initialized before public static void main(String[]) is invoked. The execution of this method will in turn drive the loading, linking and initialization of additional classes and interfaces as required.
@@ -172,18 +172,25 @@ The JVM starts up by loading an initial class using the bootstrap classloader. T
     6. variables are initialized before being read
     7. variables are a value of the correct type
     </br>
-    Performing these checks during the verifying stages means these checks do not need to be performed at runtime. Verification during linking slows down class loading however it avoids the need to perform these checks multiple when executing the bytecode.
-    **Preparing** involves allocation of memory for static storage and any data structures used by the JVM such as method tables. Static fields are created and initialized to their default values, however, no initializers or code is executed at this stage as that happens as part of initialization.
-    **Resolving** is an optional stage which involves checking symbolic references by loading the referenced classes or interfaces and checking the references are correct. If this does not take place at this point the resolution of symbolic references can be deferred until just prior to their use by a byte code instruction.
+    </br>
+    
+    Performing these checks during the verifying stages means these checks do not need to be performed at runtime. Verification during linking slows down class loading however it avoids the need to perform these checks multiple when executing the bytecode.</br>
+    **Preparing** involves allocation of memory for static storage and any data structures used by the JVM such as method   tables. Static fields are created and initialized to their default values, however, no initializers or code is executed at this stage as that happens as part of initialization.</br>
+    **Resolving** is an optional stage which involves checking symbolic references by loading the referenced classes or interfaces and checking the references are correct. If this does not take place at this point the resolution of symbolic references can be deferred until just prior to their use by a byte code instruction.</br>
+    
 **Initialization** of a class or interface consists of executing the class or interface initialization method <clinit>
 class loading, linking and initialization in the Java Virtual Machine (JVM)
-![image](Pictures/Class_Loading_Linking_Initializing.png)
+
+![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/Class_Loading_Linking_Initializing.png)
+
 In the JVM there are multiple classloaders with different roles. Each classloader delegates to its parent classloader (that loaded it) except the bootstrap classloader which is the top classloader.
     - Bootstrap Classloader is usually implemented as native code because it is instantiated very early as the JVM is loaded. The bootstrap classloader is responsible for loading the basic Java APIs, including for example rt.jar. It only loads classes found on the boot classpath which have a higher level of trust; as a result it skips much of the validation that gets done for normal classes.
     - Extension Classloader loads classes from standard Java extension APIs such as security extension functions.
     - System Classloader is the default application classloader, which loads application classes from the classpath.
     - User Defined Classloaders can alternatively be used to load application classes. A user defined classloader is used for a number of special reasons including run time reloading of classes or separation between different groups of loaded classes typically required by web servers such as Tomcat.
 classloader hierarchy in the Java Virtual Machine (JVM)
-![image](Pictures/class_loader_hierarchy.png)
+
+![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/class_loader_hierarchy.png)
+
 ##Faster Class Loading</br>
 A feature called Class Data Sharing (CDS) was introduce in HotSpot JMV from version 5.0. During the installation process of the JVM the installer loads a set of key JVM classes, such as rt.jar, into a memory-mapped shared archive. CDS reduces the time it takes to load these classes improving JVM start-up speed and allows these classes to be shared between different instances of the JVM reducing the memory footprint.

@@ -1,6 +1,6 @@
 #Shared Between Threads
 First we can have a look about the JVM_Architecture
-![image](Pictures/JVM_Internal_Architecture.png)
+![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/JVM_Internal_Architecture.png)
 ##Heap
 The Heap is used to allocate class instances and arrays at runtime. Arrays and objects can never be stored on the stack **because a frame is not designed to change in size after it has been created**. The frame only stores references that point to objects or arrays on the heap. Unlike primitive variables and references in the local variable array (in each frame) objects are always stored on the heap so they are not removed when a method ends. Instead objects are only removed by the garbage collector.
 To support garbage collection the heap is divided into three sections:
