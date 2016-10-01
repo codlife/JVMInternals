@@ -5,7 +5,8 @@ The following diagram show the key internal components of a typical JVM that con
 ##<a>Contents</a>
  1. [JVM memory structure](#jvm_memory)
  2. [Java garbage collection](#gc)
-
+ 
+</br>
 ![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/JVM_Internal_Architecture.png)
 
 ##<a name='jvm_memory'>JVM memory
