@@ -14,12 +14,12 @@ Objects and Arrays are never explicitly de-allocated instead the garbage collect
 reclaims them.</br>
 Typically this works as follows:
 
-1: New objects and arrays are created into the young generation.
-2: Minor garbage collection will operate in the young generation. Objects, that are still alive,
+ 1: New objects and arrays are created into the young generation.
+ 2: Minor garbage collection will operate in the young generation. Objects, that are still alive,
 will be moved from the eden space to the survivor space.
-3: Major garbage collection, which typically causes the application threads to pause, will move objects
+ 3: Major garbage collection, which typically causes the application threads to pause, will move objects
 between generations. Objects, that are still alive, will be moved from the young generation to the old generation.
-4: The permanent generation is collected every time the old generation is collected. They are both collected when either
+ 4: The permanent generation is collected every time the old generation is collected. They are both collected when either
  becomes full. **But notes: The permanent generation is in the non-heap space**.
 
 ##Non-Heap Memory
