@@ -172,8 +172,10 @@ The JVM starts up by loading an initial class using the bootstrap classloader. T
     6. variables are initialized before being read
     7. variables are a value of the correct type
     </br>
+    </br>
+    
     Performing these checks during the verifying stages means these checks do not need to be performed at runtime. Verification during linking slows down class loading however it avoids the need to perform these checks multiple when executing the bytecode.</br>
-    **Preparing** involves allocation of memory for static storage and any data structures used by the JVM such as method tables. Static fields are created and initialized to their default values, however, no initializers or code is executed at this stage as that happens as part of initialization.</br>
+    **Preparing** involves allocation of memory for static storage and any data structures used by the JVM such as method   tables. Static fields are created and initialized to their default values, however, no initializers or code is executed at this stage as that happens as part of initialization.</br>
     **Resolving** is an optional stage which involves checking symbolic references by loading the referenced classes or interfaces and checking the references are correct. If this does not take place at this point the resolution of symbolic references can be deferred until just prior to their use by a byte code instruction.</br>
     
 **Initialization** of a class or interface consists of executing the class or interface initialization method <clinit>
