@@ -16,4 +16,6 @@
                + Constant pool index for execution class being caught
     **(Why? we can see that there are local variables in stack frame, what's the difference)**
 3. **Difference of the interned tables and constant pool in method area**.
-we  can see the picture below
+ - Permanent Generation that contains
+   + the method area
+   + interned strings
