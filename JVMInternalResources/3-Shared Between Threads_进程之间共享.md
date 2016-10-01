@@ -55,7 +55,7 @@ The method area stores per-class information such as:
       - Modifiers
       - Attributes
 
- - ***Method data*
+ - **Method data**
    + Per method
      - Name
      - Return Type
@@ -68,8 +68,7 @@ The method area stores per-class information such as:
         - Bytecodes
         - Operand stack size
         - Local variable size
-        - Local variable table   **(Why? we can see that there are local variables in stack frame,</br>)
-          what's the difference**
+        - Local variable table   **(Why? we can see that there are local variables in stack frame, what's the difference)**
         - Exception table
             + Per execution handler
             + Start point
@@ -177,7 +176,8 @@ The exception table stores per-exception handler information such as:
  - Start point
  - End point
  - PC offset for handler code
- - Constant pool index for exception class being caught
+ - Constant pool index for exception class being caught</br>
+
 If a method has defined a try-catch or a try-finally exception handler then an Exception Table will be created. This contains information for each exception handler or finally block including the range over which the handler applies, what type of exception is being handled and where the handler code is.
 </br>When an exception is thrown the JVM looks for a matching handler in the current method, if none is found the method ends abruptly popping the current stack frame and the exception is re-thrown in the calling method (the new current frame). If no exception handler is found before all frames have been popped then the thread is terminated. This can also cause the JVM itself to terminate if the exception is thrown in the last non-daemon thread, for example if the thread is the main thread.
 </br>Finally exception handlers match all types of exceptions and so always execute whenever an exception is thrown. In the case when no exception is thrown a finally block is still executed at the end of a method, this is achieved by jumping to the finally handler code immediately before the return statement is executed.

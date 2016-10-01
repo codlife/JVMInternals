@@ -20,18 +20,20 @@ The components shown on this diagram are each explained below in two sections. F
  - Operand Stack
  - Dynamic Linking
 
-2. Shared Between Threads
+3. Shared Between Threads
  - Heap
  - Memory Management
  - Non-Heap Memory
  - Just In Time (JIT) Compilation
  - Method Area
- - Class File Structure
- - Classloader
- - Faster Class Loading
  - Where Is The Method Area
  - Classloader Reference
  - Run Time Constant Pool
  - Exception Table
  - Symbol Table
+
+4. Class file & Class loader
+  - Class File Structure
+  - Classloader
+  - Faster Class Loading
 
