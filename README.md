@@ -19,3 +19,4 @@ The following diagram show the key internal components of a typical JVM that con
 
 ##<a name='java'>Java
  * [JVM 性能优化 Java 伸缩性](http://developer.51cto.com/art/201310/413211.htm)
+ * [JVM volatile](http://developer.51cto.com/art/201309/410971.htm)
