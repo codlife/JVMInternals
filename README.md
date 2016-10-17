@@ -18,4 +18,4 @@ The following diagram show the key internal components of a typical JVM that con
 * [Java garbage colleciton algorithm in a visua method](https://spin.atomicobject.com/2014/09/03/visualizing-garbage-collection-algorithms/)
 
 ##<a name='java'>Java
- * [Java 伸缩性](http://developer.51cto.com/art/201310/413211.htm)
+ * [JVM 性能优化 Java 伸缩性](http://developer.51cto.com/art/201310/413211.htm)
