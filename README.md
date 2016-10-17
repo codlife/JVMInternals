@@ -5,6 +5,7 @@ The following diagram show the key internal components of a typical JVM that con
 ##<a>Contents</a>
  1. [JVM memory structure](#jvm_memory)
  2. [Java garbage collection](#gc)
+ 3. [Java](#java)
  
 </br>
 ![image](https://github.com/codlife/JVMInternals/blob/master/Pictures/JVM_Internal_Architecture.png)
@@ -16,3 +17,5 @@ The following diagram show the key internal components of a typical JVM that con
 * [Understanding java garbage collection](https://www.azul.com/files/Understanding_Java_Garbage_Collection_v41.pdf)
 * [Java garbage colleciton algorithm in a visua method](https://spin.atomicobject.com/2014/09/03/visualizing-garbage-collection-algorithms/)
 
+##<a name='java'>Java
+ * [Java 伸缩性](http://developer.51cto.com/art/201310/413211.htm)
